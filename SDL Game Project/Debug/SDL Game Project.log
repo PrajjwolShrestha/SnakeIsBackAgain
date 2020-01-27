@@ -1,4 +1,4 @@
 ﻿  main.cpp
-c:\users\admin\desktop\snakeisback\sdl game project\sdl game project\main.cpp(197): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\admin\desktop\snakeisback\sdl game project\sdl game project\main.cpp(205): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   SDL Game Project.vcxproj -> C:\Users\Admin\Desktop\SnakeIsBack\SDL Game Project\Debug\SDL Game Project.exe
   SDL Game Project.vcxproj -> C:\Users\Admin\Desktop\SnakeIsBack\SDL Game Project\Debug\SDL Game Project.pdb (Partial PDB)

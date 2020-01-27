@@ -105,36 +105,8 @@ int main(int argc, char **argv)
 
 	//Load up BackGround Grass for our Snake Game
 	SDL_Surface* backGrassSurface = IMG_Load("assets/grass.jpg");  //background grass
-	//load surface images for our Snake Game
-	SDL_Surface* snakeMenuSurface = IMG_Load("assets/snakeMenu.png"); //menu for our snake game
-	SDL_Surface* snakeHeadSurface = IMG_Load("assets/snakeHead.png"); //head of our snake
-	SDL_Surface* snakeBodySurface = IMG_Load("assets/snakeBody.png"); //body of our snake
-	SDL_Surface* gameOverSurface = IMG_Load("assets/gameover.png"); //gameover screen of our snake
-	SDL_Surface* foodSurface = IMG_Load("assets/food.png"); //food  of our snake
-
-
-
-	//convert into teture
-	SDL_Texture* backGrassTexture = SDL_CreateTextureFromSurface(renderer, backGrassSurface); //converting grass surface to texture
-	SDL_Texture*  snakeMenuTexture= SDL_CreateTextureFromSurface(renderer, snakeMenuSurface);//converting menu surface to texture
-
-	SDL_Texture* snakeHeadTexture = SDL_CreateTextureFromSurface(renderer, snakeHeadSurface);//converting head surface to texture
-
-	SDL_Texture* snakeBodyTexture = SDL_CreateTextureFromSurface(renderer, snakeBodySurface);//converting body surface to texture
-	SDL_Texture* gameOverTexture = SDL_CreateTextureFromSurface(renderer, gameOverSurface);//converting gameover surface to texture
-	SDL_Texture* foodTexture = SDL_CreateTextureFromSurface(renderer, foodSurface);//converting food surface to texture
-
-
-	//Free surface
-	SDL_FreeSurface(backGrassSurface);	//Free surface for grass
-	SDL_FreeSurface(snakeMenuSurface);	//Free surface for menu
-	SDL_FreeSurface(snakeHeadSurface);	//Free surface of head
-	SDL_FreeSurface(snakeBodySurface);	//Free surface of body
-	SDL_FreeSurface(gameOverSurface);	//Free surface for gameover
-	SDL_FreeSurface(foodSurface);	//Free surface for food
-
-
-
+	//converting grass surface to texture
+	SDL_Texture* backGrassTexture = SDL_CreateTextureFromSurface(renderer, backGrassSurface); 
 	//make region for our grass to be drawn
 	SDL_Rect grassRect;
 	//store w and h of backGrassTexture into source grassRect
@@ -150,6 +122,42 @@ int main(int argc, char **argv)
 	grassDestinationRect.w = grassRect.w;
 	grassDestinationRect.h = grassRect.h;
 
+
+	//load surface images for our Snake Game
+	SDL_Surface* snakeMenuSurface = IMG_Load("assets/snakeMenu.png"); //menu for our snake game
+	//converting menu surface to texture
+	SDL_Texture*  snakeMenuTexture = SDL_CreateTextureFromSurface(renderer, snakeMenuSurface);
+
+	//load head surface images for our Snake Game
+	SDL_Surface* snakeHeadSurface = IMG_Load("assets/snakeHead.png"); //head of our snake
+    //converting head surface to texture
+	SDL_Texture* snakeHeadTexture = SDL_CreateTextureFromSurface(renderer, snakeHeadSurface);
+
+	//load body surface images for our Snake Game
+	SDL_Surface* snakeBodySurface = IMG_Load("assets/snakeBody.png"); //body of our snake
+	//converting body surface to texture
+	SDL_Texture* snakeBodyTexture = SDL_CreateTextureFromSurface(renderer, snakeBodySurface);
+
+	//load gameover surface images for our Snake Game
+	SDL_Surface* gameOverSurface = IMG_Load("assets/gameover.png"); //gameover screen of our snake
+	//converting gameover surface to texture
+	SDL_Texture* gameOverTexture = SDL_CreateTextureFromSurface(renderer, gameOverSurface);
+
+	//load food surface images for our Snake Game
+	SDL_Surface* foodSurface = IMG_Load("assets/food.png"); //food  of our snake
+	SDL_Texture* foodTexture = SDL_CreateTextureFromSurface(renderer, foodSurface);//converting food surface to texture
+
+	//Free surface
+	SDL_FreeSurface(backGrassSurface);	//Free surface for grass
+	SDL_FreeSurface(snakeMenuSurface);	//Free surface for menu
+	SDL_FreeSurface(snakeHeadSurface);	//Free surface of head
+	SDL_FreeSurface(snakeBodySurface);	//Free surface of body
+	SDL_FreeSurface(gameOverSurface);	//Free surface for gameover
+	SDL_FreeSurface(foodSurface);	//Free surface for food
+
+
+
+	
 	//drawing destination rect for our menu
 	SDL_Rect gameMenuDestRect;
 	SDL_QueryTexture(snakeHeadTexture, NULL, NULL, &gameMenuDestRect.w, &gameMenuDestRect.h);
@@ -216,9 +224,10 @@ int main(int argc, char **argv)
 		/*ManageSound::manageSound.loadSound("music", "assets/music.ogg");
 		ManageSound::manageSound.playSound("music");*/
 
-
+		//explode sound loaded 
 		ManageSound::manageSound.loadSound("explode", "assets/effect.wav");
-
+		//powerup sound loaded 
+		//TODO: play when our snake eats food
 		ManageSound::manageSound.loadSound("powerup", "assets/Powerup.wav");
 
 		//INPUT HANDLING
