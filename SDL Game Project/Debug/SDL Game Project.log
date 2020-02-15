@@ -1,4 +1,19 @@
-﻿  main.cpp
-c:\users\admin\desktop\snakeisback\sdl game project\sdl game project\main.cpp(205): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+﻿  Vector.cpp
+  SoundManager.cpp
+  SnakeObstacles.cpp
+c:\users\admin\desktop\snakeisback\sdl game project\sdl game project\snakeobstacles.cpp(18): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+c:\users\admin\desktop\snakeisback\sdl game project\sdl game project\snakeobstacles.cpp(18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  MySnake.cpp
+c:\users\admin\desktop\snakeisback\sdl game project\sdl game project\mysnake.cpp(34): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\desktop\snakeisback\sdl game project\sdl game project\mysnake.cpp(137): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\desktop\snakeisback\sdl game project\sdl game project\mysnake.cpp(165): warning C4018: '<': signed/unsigned mismatch
+  main.cpp
+c:\users\admin\desktop\snakeisback\sdl game project\sdl game project\main.cpp(90): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  SnakeGameFunctions.cpp
+  GameObject.cpp
+  Animation.cpp
+c:\users\admin\desktop\snakeisback\sdl game project\sdl game project\animation.cpp(64): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+c:\users\admin\desktop\snakeisback\sdl game project\sdl game project\animation.cpp(64): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
   SDL Game Project.vcxproj -> C:\Users\Admin\Desktop\SnakeIsBack\SDL Game Project\Debug\SDL Game Project.exe
   SDL Game Project.vcxproj -> C:\Users\Admin\Desktop\SnakeIsBack\SDL Game Project\Debug\SDL Game Project.pdb (Partial PDB)

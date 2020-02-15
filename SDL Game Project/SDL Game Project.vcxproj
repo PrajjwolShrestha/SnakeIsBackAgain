@@ -19,13 +19,24 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="ManageSound.cpp" />
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="SnakeGameFunctions.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MySnake.cpp" />
+    <ClCompile Include="SnakeObstacles.cpp" />
+    <ClCompile Include="SoundManager.cpp" />
+    <ClCompile Include="Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ManageSound.h" />
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="GameObject.h" />
     <ClInclude Include="SnakeGameFunctions.h" />
+    <ClInclude Include="Constant.h" />
+    <ClInclude Include="MySnake.h" />
+    <ClInclude Include="SnakeObstacles.h" />
+    <ClInclude Include="SoundManager.h" />
+    <ClInclude Include="Vector.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{64E5AB03-5B27-42D8-BC9E-104E11B4CF8B}</ProjectGuid>
